@@ -25,3 +25,26 @@ The project leverages widely-used data science libraries such as NumPy, pandas, 
 - region: Geographical region in the U.S. where the person resides (northeast, southeast, southwest, northwest)
 - charges: Individual medical costs billed by health insurance
 
+## 📊EXPLORATORY DATA ANALYSIS (EDA)
+### 1. Distribution of Insurance Charges
+The distribution of charges is right-skewed, with most charges falling under $15,000 but some reaching beyond $60,000. This suggests the presence of high-cost outliers, associated with specific risk groups (e.g. smokers or high-BMI individuals).
+
+### 2. Correlation Heatmap
+The heatmap shows that smoking status, age and bmi have positive correlation with charges.
+
+### 3. Charges by Smoker Status
+Smokers tend to incur significantly higher charges. The median charge for smokers is over 3x higher than for non-smokers, clearly establishing smoking as a strong predictor of medical expenses.
+
+### 4. Charges by Sex
+There is no major difference in insurance charges between male and female policyholders. This supports the finding in the correlation matrix where sex_male has almost no relationship with charges.
+
+### 5. Charges by Region
+Region does not play a significant role in determining insurance charges. All regions exhibit similar distributions with overlapping medians.
+
+### 6. Charges vs Age (Colored by Smoker)
+Insurance charges increase with age, especially for smokers. Smokers tend to face much higher insurance charges as they get older compared to non-smokers, a key justification for creating interaction terms like 'age_smoker'.
+
+### 7. Charges vs BMI (Colored by Smoker)
+For people who smoke, their BMI has a significant impact on the amount they are charged for insurance. This means that as a smoker's BMI increases, their insurance costs are likely to rise more noticeably. This interaction validates adding 'bmi_smoker' interaction term in the regression model.
+
+
