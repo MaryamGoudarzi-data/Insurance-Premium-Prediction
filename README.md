@@ -76,9 +76,9 @@ The project leverages widely-used data science libraries such as NumPy, pandas, 
   - Created a new binary column 'is_male' from 'sex'
   - One-hot encoded the 'region' variable and dropped the first category to avoid the dummy variable trap
 
-## 🔎Data Modelling
+## 📈Initial Regression Analysis
 A linear regression model was fitted to the data using Statsmodels package to assess the individual impact of each predictor variable on insurance costs. 
-### Statistical Findings
+### 🔎Statistical Findings
 Variables with a statistically significant effect on charges **(p < 0.05)** included:
 - Age: Older individuals tend to have higher insurance charges.
 - BMI: Higher BMI levels are linked to increased medical costs.
@@ -92,4 +92,18 @@ Variables not statistically significant:
 
 #### Interpretation
 The model confirms that **smoking status**, **age**, and **BMI** are major drivers of insurance costs. Smokers are expected to pay the highest premiums, followed by individuals with higher BMI and older age. People living in the **Southeast** or **Southwest** regions may benefit from slightly lower charges. In contrast, **gender** and living in the **Northwest** region did not appear to influence insurance costs in this sample dataset.
+
+## 🤖Model Building with Scikit-learn
+A linear regression model was developed using the scikit-learn library to estimate medical insurance charges based on individual characteristics. The dataset was split into training and testing sets using an 80/20 ratio to evaluate the model's out-of-sample predictive performance.
+
+To account for potential interaction effects, two additional variables were introduced:
+- **bmi_smoker**: interaction between body mass index (BMI) and smoking status
+- **age_smoker**: interaction between age and smoking status
+
+These terms were informed by exploratory scatter plots, which showed that the relationship between charges and both age and BMI differed significantly between smokers and non-smokers, suggesting a **moderating effect** of smoking on these variables.
+
+After training, the model achieved an R² score of 0.865 on the test set, indicating that approximately 86.5% of the variation in insurance charges is explained by the model, suggesting that the model fits the data well and can make accurate prediction on new customer records. 
+
+
+
 
