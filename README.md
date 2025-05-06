@@ -28,29 +28,44 @@ The project leverages widely-used data science libraries such as NumPy, pandas, 
 ## 📊EXPLORATORY DATA ANALYSIS (EDA)
 <h3 align="center"> Distribution of Insurance Charges </h3>
 <p align="center">
-  <img src="Images/distribution.plot.png" width="600"/>
+  <img src="Images/distribution_plot.png" width="600"/>
 </p>
-The distribution of charges is right-skewed, with most charges falling under $15,000 but some reaching beyond $60,000. This suggests the presence of high-cost outliers, associated with specific risk groups (e.g. smokers or high-BMI individuals).
+<p align="center"> The distribution of charges is right-skewed, with most charges falling under $15,000 but some reaching beyond $60,000. This suggests the presence of high-cost outliers, associated with specific risk groups (e.g. smokers or high-BMI individuals). </p>
 
 <h3 align="center">  Correlation Heatmap </h3>
 <p align="center">
-<img src="Images/correlation.plot.png" width="600"/>
+<img src="Images/correlation_plot.png" width="600"/>
 </p>
-The heatmap shows that smoking status, age and bmi have positive correlation with charges.
+<p align="center"> The heatmap shows that smoking status, age and bmi have positive correlation with charges. </p>
 
-### 3. Charges by Smoker Status
-Smokers tend to incur significantly higher charges. The median charge for smokers is over 3x higher than for non-smokers, clearly establishing smoking as a strong predictor of medical expenses.
+<h3 align="center"> Charges by Smoker Status </h3>
+<p align="center">
+<img src="Images/smoker_plot.png" width="600"/>
+</p>
+<p align="center"> Smokers tend to incur significantly higher charges. The median charge for smokers is over 3x higher than for non-smokers, clearly establishing smoking as a strong predictor of medical expenses. </p>
 
-### 4. Charges by Sex
-There is no major difference in insurance charges between male and female policyholders. This supports the finding in the correlation matrix where sex_male has almost no relationship with charges.
+<h3 align="center"> Charges by Sex </h3>
+<p align="center">
+<img src="Images/sex_plot.png" width="600"/>
+</p>
+<p align="center"> There is no major difference in insurance charges between male and female policyholders. This supports the finding in the correlation matrix where sex_male has almost no relationship with charges. </p>
 
-### 5. Charges by Region
-Region does not play a significant role in determining insurance charges. All regions exhibit similar distributions with overlapping medians.
+<h3 align="center"> Charges by Region </h3>
+<p align="center">
+<img src="Images/region_plot.png" width="600"/>
+</p>
+<p align="center"> Region does not play a significant role in determining insurance charges. All regions exhibit similar distributions with overlapping medians. </p>
 
-### 6. Charges vs Age (Colored by Smoker)
-Insurance charges increase with age, especially for smokers. Smokers tend to face much higher insurance charges as they get older compared to non-smokers, a key justification for creating interaction terms like 'age_smoker'.
+<h3 align="center"> Charges vs Age (Colored by Smoker) </h3>
+<p align="center">
+<img src="Images/age_plot.png" width="600"/>
+</p>
+<p align="center"> Insurance charges increase with age, especially for smokers. Smokers tend to face much higher insurance charges as they get older compared to non-smokers, a key justification for creating interaction terms like 'age_smoker'. </p>
 
-### 7. Charges vs BMI (Colored by Smoker)
-For people who smoke, their BMI has a significant impact on the amount they are charged for insurance. This means that as a smoker's BMI increases, their insurance costs are likely to rise more noticeably. This interaction validates adding 'bmi_smoker' interaction term in the regression model.
+<h3 align="center"> Charges vs BMI (Colored by Smoker) </h3>
+<p align="center">
+<img src="Images/bmi_plot.png" width="600"/>
+</p>
+<p align="center"> For people who smoke, their BMI has a significant impact on the amount they are charged for insurance. This means that as a smoker's BMI increases, their insurance costs are likely to rise more noticeably. This interaction validates adding 'bmi_smoker' interaction term in the regression model. </p>
 
 
