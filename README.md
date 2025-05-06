@@ -76,7 +76,7 @@ The project leverages widely-used data science libraries such as NumPy, pandas, 
   - Created a new binary column 'is_male' from 'sex'
   - One-hot encoded the 'region' variable and dropped the first category to avoid the dummy variable trap
 
-## 📈Initial Regression Analysis
+## 📈Initial Data Analysis
 A linear regression model was fitted to the data using Statsmodels package to assess the individual impact of each predictor variable on insurance costs. 
 ### 🔎Statistical Findings
 Variables with a statistically significant effect on charges **(p < 0.05)** included:
@@ -104,6 +104,21 @@ These terms were informed by exploratory scatter plots, which showed that the re
 
 After training, the model achieved an R² score of 0.865 on the test set, indicating that approximately 86.5% of the variation in insurance charges is explained by the model, suggesting that the model fits the data well and can make accurate prediction on new customer records. 
 
+## ✅Model Validation
+To evaluate how well the model performs on new, unseen data, a separate validation dataset was used. This dataset contains individuals not included in the training or test sets, making it a good test of the model's real-world performance.
 
+The same data processing steps, such as converting categorical variables and creating interaction terms were applied using a helper function (preprocess_df). This ensured the validation data was formatted in the same way as the training data.
+
+Once predictions were made:
+
+📉 Predicted charges were added as a seperate column to the validation dataset.
+
+💼 A business rule was applied to set a minimum charge of $1000 to avoid unrealistically low predictions.
+
+📋 The table below presents sample predictions, showing how the model adjusts charges based on personal factors like age, BMI, and smoking status.
+
+<p align="center"> <img width="400" alt="image" src="https://github.com/user-attachments/assets/fd75458e-41fb-4f63-a7ff-82efa82d0b42" /> </p>
+
+✅ This confirms the model is able to generalize well and make accurate predictions for new individuals, demonstrating strong potential for use in insurance pricing and planning.
 
 
