@@ -4,7 +4,7 @@ Globally, health insurance costs are on the rise, with significant increases pro
 
 The workflow begins with setting up and querying the dataset using SQL, followed by exploratory data analysis (EDA) and predictive modeling using Python.
 
-The project leverages widely-used data science libraries such as NumPy, pandas, scikit-learn, seaborn, and matplotlib.
+The project utilises widely-used data science libraries such as NumPy, pandas, scikit-learn, seaborn, and matplotlib.
 
 ## 🧠Key Features
 - Used **MySQL** to structure and preview the dataset
@@ -15,7 +15,7 @@ The project leverages widely-used data science libraries such as NumPy, pandas, 
 - Validated predictions on a separate dataset
 - Used business rules to cap unrealistic predictions (e.g., minimum charge of $1000)
 
-## 📊Data Description
+## ℹData Description
   
 - **age**: Age of the policyholder
 - **sex**: Gender of the policyholder, either male or female
