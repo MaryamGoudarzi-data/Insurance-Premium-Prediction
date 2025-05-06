@@ -1,4 +1,4 @@
- # 🏥Medical Insurance Premium Prediction
+ <h1 align="center"> 🏥Medical Insurance Premium Prediction </h1>
 
 Globally, health insurance costs are on the rise, with significant increases projected across Asia-Pacific and North America. This project aims to address this challenge by using a Linear Regression model to predict medical insurance charges based on key demographic and lifestyle factors, including age, sex, BMI, number of children, smoking status, and region.
 
@@ -17,13 +17,13 @@ The project leverages widely-used data science libraries such as NumPy, pandas, 
 
 ## 📊Data Description
   
-- age: Age of the policyholder
-- sex: Gender of the policyholder, either male or female
-- bmi: Body Mass Index, a numeric value calculated from weight and height, used to classify underweight, normal, overweight, or obesity. A healthy BMI typically ranges from 18.5 to 24.9
-- children: Number of dependents covered under the insurance plan
-- smoker: Indicates whether the individual is a smoker (yes or no)
-- region: Geographical region in the U.S. where the person resides (northeast, southeast, southwest, northwest)
-- charges: Individual medical costs billed by health insurance
+- **age**: Age of the policyholder
+- **sex**: Gender of the policyholder, either male or female
+- **bmi**: Body Mass Index, a numeric value calculated from weight and height, used to classify underweight, normal, overweight, or obesity. A healthy BMI typically ranges from 18.5 to 24.9
+- **children**: Number of dependents covered under the insurance plan
+- **smoker**: Indicates whether the individual is a smoker (yes or no)
+- **region**: Geographical region in the U.S. where the person resides (northeast, southeast, southwest, northwest)
+- **charges**: Individual medical costs billed by health insurance
 
 ## 📊EXPLORATORY DATA ANALYSIS (EDA)
 <h3 align="center"> Distribution of Insurance Charges </h3>
@@ -68,4 +68,10 @@ The project leverages widely-used data science libraries such as NumPy, pandas, 
 </p>
 <p align="center"> For people who smoke, their BMI has a significant impact on the amount they are charged for insurance. This means that as a smoker's BMI increases, their insurance costs are likely to rise more noticeably. This interaction validates adding 'bmi_smoker' interaction term in the regression model. </p>
 
-
+## 🧹Data Cleaning & Preparation
+- Removed missing values
+- Checked for duplicate rows - removed 1 duplicate row
+- Converted categorical variables to numeric for machine learning:
+  - Mapped 'smoker' from 'yes'/'no' to 1/0
+  - Created a new binary column 'is_male' from 'sex'
+  - One-hot encoded the 'region' variable and dropped the first category to avoid the dummy variable trap
