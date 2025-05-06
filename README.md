@@ -26,11 +26,16 @@ The project leverages widely-used data science libraries such as NumPy, pandas, 
 - charges: Individual medical costs billed by health insurance
 
 ## 📊EXPLORATORY DATA ANALYSIS (EDA)
-### 1. Distribution of Insurance Charges
-<img src="Images/distribution_plot.png" width="600"/>
+<h3 align="center"> Distribution of Insurance Charges </h3>
+<p align="center">
+  <img src="Images/distribution.plot.png" width="600"/>
+</p>
 The distribution of charges is right-skewed, with most charges falling under $15,000 but some reaching beyond $60,000. This suggests the presence of high-cost outliers, associated with specific risk groups (e.g. smokers or high-BMI individuals).
 
-### 2. Correlation Heatmap
+<h3 align="center">  Correlation Heatmap </h3>
+<p align="center">
+<img src="Images/correlation.plot.png" width="600"/>
+</p>
 The heatmap shows that smoking status, age and bmi have positive correlation with charges.
 
 ### 3. Charges by Smoker Status
