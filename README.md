@@ -75,3 +75,21 @@ The project leverages widely-used data science libraries such as NumPy, pandas, 
   - Mapped 'smoker' from 'yes'/'no' to 1/0
   - Created a new binary column 'is_male' from 'sex'
   - One-hot encoded the 'region' variable and dropped the first category to avoid the dummy variable trap
+
+## 🔎Data Modelling
+A linear regression model was fitted to the data using Statsmodels package to assess the individual impact of each predictor variable on insurance costs. 
+### Statistical Findings
+Variables with a statistically significant effect on charges **(p < 0.05)** included:
+- Age: Older individuals tend to have higher insurance charges.
+- BMI: Higher BMI levels are linked to increased medical costs.
+- Children: Each additional child is associated with a moderate increase in charges.
+- Smoker: The most impactful predictor, smokers face substantially higher charges.
+- Region (Southeast and Southwest): Individuals in these regions are expected to pay slightly less compared to the reference region (Northeast).
+
+Variables not statistically significant:
+- Gender (is_male): No meaningful difference in charges between males and females.
+- Region Northwest: No significant difference compared to the reference region.
+
+#### Interpretation
+The model confirms that **smoking status**, **age**, and **BMI** are major drivers of insurance costs. Smokers are expected to pay the highest premiums, followed by individuals with higher BMI and older age. People living in the **Southeast** or **Southwest** regions may benefit from slightly lower charges. In contrast, **gender** and living in the **Northwest** region did not appear to influence insurance costs in this sample dataset.
+
